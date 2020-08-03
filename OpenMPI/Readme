@@ -1,0 +1,24 @@
+This folder has 4 files, one executable "mpi_fd_predador_prey", a modified code with openMPI
+"mpi_fd_predador_prey.c", a file in .sbatch "fd_predador_prey_mpi.sbatch" and an output 
+file named "output_fd_predador_prey1.out" 
+
+module load devtools/mpi/openmpi/3.1.4
+gcc version 4.8.5 20150623
+Red Hat 4.8.5-39
+
+for execution, file "mpi_fd_predador_prey.c" is compiled with the command
+mpicc mpi_fd_predador_prey.c -o mpi_fd_predador_prey
+
+once this command is done, proceed to run the executable named mpi_fd_predador_prey
+with "sbatch fd_predador_prey_mpi.sbatch"
+
+this command generates the output file "output_fd_predador_prey1.out" and "errores_fd_predador_prey1.err"
+where if no errors are generated, the last file will be an empty file, it only shows the processes that were performed 
+
+File fd_predador_prey_mpi.sbatch line20, shows that it was compiled with the following code:"mpirun -np 4 ./mpi_fd_predador_prey
+
+
+
+*****Spanish version *********
+
+Cuando ejecuto los tres tipos de programas para un total de 30000 datos se observa que el tiempo de ejecucion para el programa original sin paralelizar es de 0.090000 segundos, cuando lo paralelizo con openMP, su tiempo de ejecucion disminuye a 0.084190 segundos, pero cuando lo paralelizo con openMPI, su tiempo promedio de ejecucion es de 0.07628325 segundos 
