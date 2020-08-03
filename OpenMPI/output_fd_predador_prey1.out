@@ -1,0 +1,116 @@
+02 August 2020 08:50:44 PM
+02 August 2020 08:50:44 PM
+02 August 2020 08:50:44 PM
+02 August 2020 08:50:44 PM
+
+FD_PREDATOR_PREY
+  C version
+
+  A finite difference approximate solution of a pair
+  of ordinary differential equations for a population
+  of predators and prey.
+
+  The exact solution shows wave behavior, with a fixed
+  period and amplitude.  The finite difference approximation
+  can provide a good estimate for this behavior if the stepsize
+  DT is small enough.
+
+
+FD_PREDATOR_PREY
+  C version
+
+  A finite difference approximate solution of a pair
+  of ordinary differential equations for a population
+  of predators and prey.
+
+  The exact solution shows wave behavior, with a fixed
+  period and amplitude.  The finite difference approximation
+  can provide a good estimate for this behavior if the stepsize
+  DT is small enough.
+
+FD_PREDATOR_PREY:
+  Please enter the number of time steps:
+
+FD_PREDATOR_PREY
+  C version
+
+  A finite difference approximate solution of a pair
+  of ordinary differential equations for a population
+  of predators and prey.
+
+  The exact solution shows wave behavior, with a fixed
+  period and amplitude.  The finite difference approximation
+  can provide a good estimate for this behavior if the stepsize
+  DT is small enough.
+
+FD_PREDATOR_PREY:
+  Please enter the number of time steps:
+
+
+  Initial time    = 0.000000
+  Final time      = 5.000000
+  Initial prey    = 5000.000000
+FD_PREDATOR_PREY:
+  Please enter the number of time steps:
+
+  Initial time    = 0.000000
+  Final time      = 5.000000
+  Initial prey    = 5000.000000
+  Initial pred    = 100.000000
+  Number of steps = 30000
+  Initial time    = 0.000000
+  Final time      = 5.000000
+  Initial prey    = 5000.000000
+  Initial pred    = 100.000000
+  Number of steps = 30000
+  Initial pred    = 100.000000
+  Number of steps = 30000
+
+FD_PREDATOR_PREY
+  C version
+
+  A finite difference approximate solution of a pair
+  of ordinary differential equations for a population
+  of predators and prey.
+
+  The exact solution shows wave behavior, with a fixed
+  period and amplitude.  The finite difference approximation
+  can provide a good estimate for this behavior if the stepsize
+  DT is small enough.
+
+FD_PREDATOR_PREY:
+  Please enter the number of time steps:
+
+  Initial time    = 0.000000
+  Final time      = 5.000000
+  Initial prey    = 5000.000000
+  Initial pred    = 100.000000
+  Number of steps = 30000
+  T, R, F values written to "trf_30000.txt".
+Tiempo de ejecución = 0.075585
+  T, R, F values written to "trf_30000.txt".
+Tiempo de ejecución = 0.075203
+  T, R, F values written to "trf_30000.txt".
+Tiempo de ejecución = 0.076541
+  T, R, F values written to "trf_30000.txt".
+Tiempo de ejecución = 0.077804
+
+FD_PREDATOR_PREY
+  Normal end of execution.
+
+02 August 2020 08:50:44 PM
+
+FD_PREDATOR_PREY
+  Normal end of execution.
+
+02 August 2020 08:50:44 PM
+
+FD_PREDATOR_PREY
+  Normal end of execution.
+
+02 August 2020 08:50:44 PM
+
+FD_PREDATOR_PREY
+  Normal end of execution.
+
+02 August 2020 08:50:44 PM
