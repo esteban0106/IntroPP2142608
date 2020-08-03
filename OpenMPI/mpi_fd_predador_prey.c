@@ -139,8 +139,8 @@ int main ( int argc, char *argv[] )
 {
 # define LINE_MAX_LEN 255
   int namelen;
-  char processor_name[MPI_MAX_PROCESSOR_NAME];
-  int numprocxnodo, numnodos;  //numprocxnodo es el numero de nodos en cada proceso y numnodos es el total del numero de nodos
+  char processor_name[MPI_MAX_PROCESSOR_NAME];  //Added
+  int numprocxnodo, numnodos;  //numprocxnodo es el numero de nodos en cada proceso y numnodos es el total del numero de nodos		Added
   double dt;
   char filename[255];
   int i;
@@ -207,8 +207,7 @@ int main ( int argc, char *argv[] )
 	Added 29 June 2020
 
   Declare empezar and terminar as variables to measure the time it takes to execute the code, also incorporate
-  pragma omp parallel for, with this i'll be able to paralleliza the for cycle in openMP and get an improvement un thee performance
-  finally i print the time it took to execute the code
+  MPI_Comm_size,MPI_Comm_rank,MPI_Get_processor_name with this we obtain the number of processes and cycles per node that we require to parallelize the code
 
 */
 MPI_Init(&argc,&argv);
@@ -219,8 +218,14 @@ MPI_Comm_rank(MPI_COMM_WORLD,&numprocxnodo);
 MPI_Get_processor_name(processor_name,&namelen);
 fprintf(stderr, "Prcesos %d in %s\n", numprocxnodo, processor_name);
 
-int n = LINE_MAX_LEN/step_num;
+int n = LINE_MAX_LEN/step_num;                // Number of nodes required per step
 
+/*
+  with MPI_Reduce Reduce a value of a process group into a single root process.
+  converting trf into a single file filename
+  
+*/
+	
 MPI_Reduce(trf ,filename ,n ,MPI_INT ,MPI_MAX , 0,MPI_COMM_WORLD);
 
 if (numprocxnodo == 0)
@@ -244,7 +249,7 @@ if (numprocxnodo == 0)
   r8vla2_write ( filename, 3, step_num + 1, trf );
 
   printf ( "  T, R, F values written to \"%s\".\n", filename );
-terminar=MPI_Wtime();											//Added
+terminar=MPI_Wtime();							//Added
 printf("Tiempo de ejecución = %lf\n",terminar-empezar);			//Added
 /*
   Terminate.
